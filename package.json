@@ -1,0 +1,77 @@
+{
+  "name": "svelte-component",
+  "description": "Template for a ready-to-publish Svelte component.",
+  "version": "0.1.0",
+  "author": {
+    "name": "himynameisdave",
+    "email": "d@velunny.com",
+    "url": "https://himynameisdave.com"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "svelte": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build && npm run package",
+    "preview": "vite preview",
+    "package": "svelte-kit sync && svelte-package && publint",
+    "prepublishOnly": "npm run package",
+    "test": "npm run test:integration && npm run test:unit",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+    "lint": "eslint . --ext .js,.ts,.svelte",
+    "lint:fix": "eslint . --ext .js,.ts,.svelte --fix",
+    "test:integration": "playwright test",
+    "test:unit": "vitest --run",
+    "test:unit:watch": "vitest",
+    "release": "npm run package && np --no-yarn"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "svelte": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "!dist/**/*.test.*",
+    "!dist/**/*.spec.*"
+  ],
+  "engines": {
+    "node": ">= 16"
+  },
+  "lint-staged": {
+    "*.ts": "eslint ./ --fix --quiet",
+    "*.svelte": "eslint ./ --fix --quiet"
+  },
+  "peerDependencies": {
+    "svelte": "^4.0.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.37.1",
+    "@sveltejs/adapter-auto": "^2.0.0",
+    "@sveltejs/kit": "^1.24.0",
+    "@sveltejs/package": "^2.2.2",
+    "eslint-config-himynameisdave": "^8.1.0",
+    "husky": "^8.0.3",
+    "less": "^4.2.0",
+    "lint-staged": "^14.0.1",
+    "np": "^8.0.4",
+    "publint": "^0.2.2",
+    "svelte": "^4.2.0",
+    "svelte-check": "^3.5.1",
+    "tslib": "^2.6.2",
+    "typescript": "^5.2.2",
+    "vite": "^4.4.9",
+    "vitest": "^0.34.3"
+  },
+  "keywords": [
+    "svelte",
+    "component",
+    "frontend",
+    "svelte-components"
+  ],
+  "private": false
+}
