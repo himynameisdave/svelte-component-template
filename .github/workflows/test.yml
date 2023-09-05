@@ -1,8 +1,9 @@
 name: test
-on: [
-  push,
-  pull_request
-]
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
 env:
   CI: true
 jobs:
@@ -21,5 +22,10 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install
         run: yarn install
-      - name: Test
-        run: yarn test
+      # This is needed for the integration tests:
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+      - name: Unit Tests
+        run: yarn run test:unit
+      - name: Integration Tests
+        run: yarn run test:integration
