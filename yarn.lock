@@ -5647,7 +5647,7 @@ vitefu@^0.2.4:
   resolved "https://registry.npmjs.org/vitefu/-/vitefu-0.2.4.tgz"
   integrity sha512-fanAXjSaf9xXtOOeno8wZXIhgia+CZury481LsDaV++lSvcU2R9Ch2bPh3PYFyoHW+w9LqAeYRISVQjUIew14g==
 
-vitest@^0.34.3:
+vitest@0.34.3:
   version "0.34.3"
   resolved "https://registry.yarnpkg.com/vitest/-/vitest-0.34.3.tgz#863d61c133d01b16e49fd52d380c09fa5ac03188"
   integrity sha512-7+VA5Iw4S3USYk+qwPxHl8plCMhA5rtfwMjgoQXMT7rO5ldWcdsdo3U1QD289JgglGK4WeOzgoLTsGFu6VISyQ==
