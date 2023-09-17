@@ -39,7 +39,7 @@
     "!dist/**/*.spec.*"
   ],
   "engines": {
-    "node": ">= 16"
+    "node": ">= 18"
   },
   "lint-staged": {
     "*.ts": "eslint ./ --fix --quiet",
