@@ -17,10 +17,10 @@
     "preview": "vite preview",
     "package": "svelte-kit sync && svelte-package && publint",
     "prepublishOnly": "npm run package",
-    "test": "npm run test:unit && npm run test:integration",
     "typecheck": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "lint": "eslint . --ext .js,.ts,.svelte",
     "lint:fix": "eslint . --ext .js,.ts,.svelte --fix",
+    "test": "npm run test:unit && npm run test:integration",
     "test:integration": "playwright test",
     "test:unit": "vitest --run",
     "test:unit:watch": "vitest",
@@ -63,8 +63,8 @@
     "svelte-check": "^3.6.1",
     "tslib": "^2.6.2",
     "typescript": "^5.3.2",
-    "vite": "^4.5.0",
-    "vitest": "0.34.3"
+    "vite": "^5.0.2",
+    "vitest": "^0.34.6"
   },
   "keywords": [
     "svelte",
